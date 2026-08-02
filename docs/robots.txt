@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fryd5449-web.github.io/screen-translate/sitemap.xml
+
