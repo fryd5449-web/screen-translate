@@ -1,0 +1,104 @@
+<Window x:Class="ScreenTranslate.Views.AboutUpdatesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="حول البرنامج والتحديثات"
+        Height="560"
+        Width="620"
+        MinHeight="500"
+        MinWidth="520"
+        WindowStartupLocation="CenterOwner"
+        FlowDirection="RightToLeft"
+        Background="#121823"
+        Foreground="#E8EDF7"
+        FontFamily="Segoe UI Variable Text, Segoe UI">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="14" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="12" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="14" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="حول البرنامج والتحديثات" FontSize="24" FontWeight="SemiBold" />
+            <TextBlock Text="مترجم الشاشة" FontSize="16" FontWeight="SemiBold" Foreground="#F2F5FF" Margin="0,4,0,0" />
+            <TextBlock Text="Screen Translator" FontSize="10.5" Foreground="#AEB8CB" Margin="0,2,0,0" FlowDirection="LeftToRight" />
+        </StackPanel>
+
+        <Border Grid.Row="2" Background="#1A2434" CornerRadius="10" Padding="12">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="الإصدار الحالي:" FontSize="14" Foreground="#B9C4D8" />
+                <TextBlock x:Name="CurrentVersionText" Text="-" FontSize="14" FontWeight="SemiBold" Margin="6,0,0,0" />
+            </StackPanel>
+        </Border>
+
+        <Button Grid.Row="4"
+                x:Name="CheckForUpdateButton"
+                Height="44"
+                Content="التحقق من وجود تحديث"
+                Background="#E3B04B"
+                Foreground="#1B1B1B"
+                BorderThickness="0"
+                FontSize="16"
+                FontWeight="SemiBold"
+                Cursor="Hand"
+                Click="CheckForUpdateButton_OnClick" />
+
+        <Border Grid.Row="6" Background="#1A2434" CornerRadius="10" Padding="12">
+            <StackPanel>
+                <TextBlock Text="رقم الإصدار الجديد (مستقبلي)" FontSize="13" Foreground="#AEB8CB" />
+                <TextBlock x:Name="LatestVersionText" Text="-" FontSize="16" FontWeight="SemiBold" Margin="0,4,0,0" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="8" Background="#1A2434" CornerRadius="10" Padding="12">
+            <StackPanel>
+                <TextBlock Text="حجم التحديث (مستقبلي)" FontSize="13" Foreground="#AEB8CB" />
+                <TextBlock x:Name="UpdateSizeText" Text="-" FontSize="16" FontWeight="SemiBold" Margin="0,4,0,0" />
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Row="10" Background="#1A2434" CornerRadius="10" Padding="12">
+            <StackPanel>
+                <TextBlock Text="قائمة التغييرات (مستقبلي)" FontSize="13" Foreground="#AEB8CB" Margin="0,0,0,8" />
+                <TextBox x:Name="ReleaseNotesText"
+                         Text="سيتم عرض قائمة التغييرات هنا لاحقًا."
+                         IsReadOnly="True"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         MinHeight="120"
+                         VerticalScrollBarVisibility="Auto"
+                         Background="#101723"
+                         Foreground="#E8EDF7"
+                         BorderBrush="#31445F" />
+                <TextBlock Text="رابط تحميل موثوق واحد (مستقبلي)" FontSize="13" Foreground="#AEB8CB" Margin="0,12,0,2" />
+                <TextBox x:Name="TrustedUrlText"
+                         Text="-"
+                         IsReadOnly="True"
+                         Background="#101723"
+                         Foreground="#E8EDF7"
+                         BorderBrush="#31445F"
+                         FlowDirection="LeftToRight" />
+            </StackPanel>
+        </Border>
+
+        <Button Grid.Row="12"
+                Height="38"
+                Width="110"
+                HorizontalAlignment="Left"
+                Content="إغلاق"
+                Click="CloseButton_OnClick"
+                Background="#2C3C56"
+                Foreground="#EFF3FB"
+                BorderThickness="0" />
+    </Grid>
+</Window>

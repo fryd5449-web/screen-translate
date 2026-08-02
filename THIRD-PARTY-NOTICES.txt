@@ -1,0 +1,6 @@
+Screen Translator includes Tesseract OCR and its runtime dependencies.
+Tesseract OCR is licensed under the Apache License 2.0.
+Project: https://github.com/tesseract-ocr/tesseract
+
+Language data files are provided by the tesseract-ocr/tessdata_fast project.
+Project: https://github.com/tesseract-ocr/tessdata_fast

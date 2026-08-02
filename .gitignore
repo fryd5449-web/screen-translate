@@ -1,0 +1,36 @@
+# Visual Studio / .NET build output
+.vs/
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+*.user
+*.suo
+*.pdb
+*.cache
+*.log
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local publishing and installer output
+publish/
+artifacts/
+staging/
+temp/
+tmp/
+releases/*.exe
+installer/Output/
+installer/output/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.secrets.json
+appsettings.*.local.json
+
